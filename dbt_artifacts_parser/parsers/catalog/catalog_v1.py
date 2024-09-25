@@ -12,7 +12,7 @@ from dbt_artifacts_parser.parsers.base import BaseParserModel
 
 class CatalogMetadata(BaseParserModel):
     model_config = ConfigDict(
-        extra='forbid',
+        extra='ignore',
     )
     dbt_schema_version: Optional[str] = 'https://schemas.getdbt.com/dbt/catalog/v1.json'
     dbt_version: Optional[str] = '0.19.0'
@@ -23,7 +23,7 @@ class CatalogMetadata(BaseParserModel):
 
 class TableMetadata(BaseParserModel):
     model_config = ConfigDict(
-        extra='forbid',
+        extra='ignore',
     )
     type: str
     database: Optional[str] = None
@@ -35,7 +35,7 @@ class TableMetadata(BaseParserModel):
 
 class ColumnMetadata(BaseParserModel):
     model_config = ConfigDict(
-        extra='forbid',
+        extra='ignore',
     )
     type: str
     comment: Optional[str] = None
@@ -45,7 +45,7 @@ class ColumnMetadata(BaseParserModel):
 
 class StatsItem(BaseParserModel):
     model_config = ConfigDict(
-        extra='forbid',
+        extra='ignore',
     )
     id: str
     label: str
@@ -56,7 +56,7 @@ class StatsItem(BaseParserModel):
 
 class CatalogTable(BaseParserModel):
     model_config = ConfigDict(
-        extra='forbid',
+        extra='ignore',
     )
     metadata: TableMetadata
     columns: Dict[str, ColumnMetadata]
@@ -66,7 +66,7 @@ class CatalogTable(BaseParserModel):
 
 class CatalogV1(BaseParserModel):
     model_config = ConfigDict(
-        extra='forbid',
+        extra='ignore',
     )
     metadata: CatalogMetadata
     nodes: Dict[str, CatalogTable]
