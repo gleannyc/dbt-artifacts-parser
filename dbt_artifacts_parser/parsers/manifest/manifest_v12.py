@@ -161,7 +161,7 @@ class DependsOn(BaseParserModel):
     model_config = ConfigDict(
         extra='ignore',
     )
-    macros: Optional[List[str]] = None
+    macros: Optional[List[Optional[str]]] = None
     nodes: Optional[List[str]] = None
 
 
@@ -1249,7 +1249,7 @@ class DependsOn9(BaseParserModel):
     model_config = ConfigDict(
         extra='ignore',
     )
-    macros: Optional[List[str]] = None
+    macros: Optional[List[Optional[str]]] = None
 
 
 class Nodes9(BaseParserModel):
@@ -1494,7 +1494,7 @@ class DependsOn11(BaseParserModel):
     model_config = ConfigDict(
         extra='ignore',
     )
-    macros: Optional[List[str]] = None
+    macros: Optional[List[Optional[str]]] = None
     nodes: Optional[List[str]] = None
 
 
@@ -2960,7 +2960,7 @@ class DependsOn22(BaseParserModel):
     model_config = ConfigDict(
         extra='ignore',
     )
-    macros: Optional[List[str]] = None
+    macros: Optional[List[Optional[str]]] = None
 
 
 class Disabled9(BaseParserModel):
@@ -3115,7 +3115,7 @@ class DependsOn23(BaseParserModel):
     model_config = ConfigDict(
         extra='ignore',
     )
-    macros: Optional[List[str]] = None
+    macros: Optional[List[Optional[str]]] = None
     nodes: Optional[List[str]] = None
 
 

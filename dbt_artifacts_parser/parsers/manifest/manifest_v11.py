@@ -152,7 +152,7 @@ class DependsOn(BaseParserModel):
     model_config = ConfigDict(
         extra='ignore',
     )
-    macros: Optional[List[str]] = None
+    macros: Optional[List[Optional[str]]] = None
     nodes: Optional[List[str]] = None
 
 
@@ -706,7 +706,7 @@ class MacroDependsOn(BaseParserModel):
     model_config = ConfigDict(
         extra='ignore',
     )
-    macros: Optional[List[str]] = None
+    macros: Optional[List[Optional[str]]] = None
 
 
 class SeedNode(BaseParserModel):
