@@ -400,7 +400,7 @@ class SnapshotConfig(BaseParserModel):
     full_refresh: Optional[bool] = None
     on_schema_change: Optional[str] = 'ignore'
     strategy: Optional[str] = None
-    unique_key: Optional[str] = None
+    unique_key: Optional[Union[str, List[str]]] = None
     target_schema: Optional[str] = None
     target_database: Optional[str] = None
     updated_at: Optional[str] = None

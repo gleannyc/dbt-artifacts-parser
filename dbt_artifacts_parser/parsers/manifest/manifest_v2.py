@@ -412,7 +412,7 @@ class SnapshotConfig(BaseParserModel):
     tags: Optional[Union[List[str], str]] = []
     full_refresh: Optional[bool] = None
     strategy: Optional[str] = None
-    unique_key: Optional[str] = None
+    unique_key: Optional[Union[str, List[str]]] = None
     target_schema: Optional[str] = None
     target_database: Optional[str] = None
     updated_at: Optional[str] = None

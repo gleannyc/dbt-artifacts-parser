@@ -391,7 +391,7 @@ class TimestampSnapshotConfig(BaseParserModel):
     database: Optional[str] = None
     tags: Optional[Union[List[str], str]] = []
     full_refresh: Optional[bool] = None
-    unique_key: str
+    unique_key: Optional[Union[str, List[str]]] = None
     target_schema: str
     target_database: Optional[str] = None
     strategy: Strategy
@@ -423,7 +423,7 @@ class CheckSnapshotConfig(BaseParserModel):
     database: Optional[str] = None
     tags: Optional[Union[List[str], str]] = []
     full_refresh: Optional[bool] = None
-    unique_key: str
+    unique_key: Optional[Union[str, List[str]]] = None
     target_schema: str
     target_database: Optional[str] = None
     strategy: Strategy1
@@ -451,7 +451,7 @@ class GenericSnapshotConfig(BaseParserModel):
     database: Optional[str] = None
     tags: Optional[Union[List[str], str]] = []
     full_refresh: Optional[bool] = None
-    unique_key: str
+    unique_key: Optional[Union[str, List[str]]] = None
     target_schema: str
     target_database: Optional[str] = None
     strategy: Strategy2

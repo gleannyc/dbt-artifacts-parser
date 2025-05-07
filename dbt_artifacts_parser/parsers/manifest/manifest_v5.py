@@ -409,7 +409,7 @@ class SnapshotConfig(BaseParserModel):
     quoting: Optional[Dict[str, Any]] = {}
     column_types: Optional[Dict[str, Any]] = {}
     full_refresh: Optional[bool] = None
-    unique_key: Optional[str] = None
+    unique_key: Optional[Union[str, List[str]]] = None
     on_schema_change: Optional[str] = 'ignore'
     strategy: Optional[str] = None
     target_schema: Optional[str] = None
